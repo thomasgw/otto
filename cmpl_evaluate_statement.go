@@ -82,8 +82,22 @@ func (self *_runtime) cmpl_evaluate_nodeStatement(node _nodeStatement) Value {
 		return self.cmpl_evaluate_nodeStatement(node.statement)
 
 	case *_nodeReturnStatement:
+		//if node.argument != nil {
+		//	return toValue(newReturnResult(self.cmpl_evaluate_nodeExpression(node.argument).resolve()))
+		//}
+		//return toValue(newReturnResult(Value{}))
 		if node.argument != nil {
-			return toValue(newReturnResult(self.cmpl_evaluate_nodeExpression(node.argument).resolve()))
+			switch v := node.argument.(type) {
+			case *_nodeFunctionLiteral:
+				panic(newException("Return value is not allowed to be a function literal."))
+			case *_nodeIdentifier:
+				reference := getIdentifierReference(self, self.scope.lexical, v.name, false, _at(v.idx))
+				if reference.getValue().isCallable(){
+					panic(newException("Return value is not allowed to be a function reference."))
+				}
+			default:
+				return toValue(newReturnResult(self.cmpl_evaluate_nodeExpression(node.argument).resolve()))
+			}
 		}
 		return toValue(newReturnResult(Value{}))
 
