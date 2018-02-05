@@ -3403,1579 +3403,1579 @@ func _newContext(runtime *_runtime) {
 			},
 		}
 	}
-	{
-		toString_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toString",
-				call: builtinDate_toString,
-			},
-		}
-		toDateString_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toDateString",
-				call: builtinDate_toDateString,
-			},
-		}
-		toTimeString_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toTimeString",
-				call: builtinDate_toTimeString,
-			},
-		}
-		toUTCString_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toUTCString",
-				call: builtinDate_toUTCString,
-			},
-		}
-		toISOString_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toISOString",
-				call: builtinDate_toISOString,
-			},
-		}
-		toJSON_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 1,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toJSON",
-				call: builtinDate_toJSON,
-			},
-		}
-		toGMTString_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toGMTString",
-				call: builtinDate_toGMTString,
-			},
-		}
-		toLocaleString_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toLocaleString",
-				call: builtinDate_toLocaleString,
-			},
-		}
-		toLocaleDateString_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toLocaleDateString",
-				call: builtinDate_toLocaleDateString,
-			},
-		}
-		toLocaleTimeString_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "toLocaleTimeString",
-				call: builtinDate_toLocaleTimeString,
-			},
-		}
-		valueOf_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "valueOf",
-				call: builtinDate_valueOf,
-			},
-		}
-		getTime_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getTime",
-				call: builtinDate_getTime,
-			},
-		}
-		getYear_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getYear",
-				call: builtinDate_getYear,
-			},
-		}
-		getFullYear_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getFullYear",
-				call: builtinDate_getFullYear,
-			},
-		}
-		getUTCFullYear_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getUTCFullYear",
-				call: builtinDate_getUTCFullYear,
-			},
-		}
-		getMonth_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getMonth",
-				call: builtinDate_getMonth,
-			},
-		}
-		getUTCMonth_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getUTCMonth",
-				call: builtinDate_getUTCMonth,
-			},
-		}
-		getDate_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getDate",
-				call: builtinDate_getDate,
-			},
-		}
-		getUTCDate_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getUTCDate",
-				call: builtinDate_getUTCDate,
-			},
-		}
-		getDay_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getDay",
-				call: builtinDate_getDay,
-			},
-		}
-		getUTCDay_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getUTCDay",
-				call: builtinDate_getUTCDay,
-			},
-		}
-		getHours_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getHours",
-				call: builtinDate_getHours,
-			},
-		}
-		getUTCHours_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getUTCHours",
-				call: builtinDate_getUTCHours,
-			},
-		}
-		getMinutes_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getMinutes",
-				call: builtinDate_getMinutes,
-			},
-		}
-		getUTCMinutes_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getUTCMinutes",
-				call: builtinDate_getUTCMinutes,
-			},
-		}
-		getSeconds_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getSeconds",
-				call: builtinDate_getSeconds,
-			},
-		}
-		getUTCSeconds_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getUTCSeconds",
-				call: builtinDate_getUTCSeconds,
-			},
-		}
-		getMilliseconds_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getMilliseconds",
-				call: builtinDate_getMilliseconds,
-			},
-		}
-		getUTCMilliseconds_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getUTCMilliseconds",
-				call: builtinDate_getUTCMilliseconds,
-			},
-		}
-		getTimezoneOffset_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "getTimezoneOffset",
-				call: builtinDate_getTimezoneOffset,
-			},
-		}
-		setTime_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 1,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setTime",
-				call: builtinDate_setTime,
-			},
-		}
-		setMilliseconds_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 1,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setMilliseconds",
-				call: builtinDate_setMilliseconds,
-			},
-		}
-		setUTCMilliseconds_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 1,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setUTCMilliseconds",
-				call: builtinDate_setUTCMilliseconds,
-			},
-		}
-		setSeconds_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 2,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setSeconds",
-				call: builtinDate_setSeconds,
-			},
-		}
-		setUTCSeconds_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 2,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setUTCSeconds",
-				call: builtinDate_setUTCSeconds,
-			},
-		}
-		setMinutes_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 3,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setMinutes",
-				call: builtinDate_setMinutes,
-			},
-		}
-		setUTCMinutes_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 3,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setUTCMinutes",
-				call: builtinDate_setUTCMinutes,
-			},
-		}
-		setHours_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 4,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setHours",
-				call: builtinDate_setHours,
-			},
-		}
-		setUTCHours_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 4,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setUTCHours",
-				call: builtinDate_setUTCHours,
-			},
-		}
-		setDate_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 1,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setDate",
-				call: builtinDate_setDate,
-			},
-		}
-		setUTCDate_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 1,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setUTCDate",
-				call: builtinDate_setUTCDate,
-			},
-		}
-		setMonth_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 2,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setMonth",
-				call: builtinDate_setMonth,
-			},
-		}
-		setUTCMonth_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 2,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setUTCMonth",
-				call: builtinDate_setUTCMonth,
-			},
-		}
-		setYear_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 1,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setYear",
-				call: builtinDate_setYear,
-			},
-		}
-		setFullYear_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 3,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setFullYear",
-				call: builtinDate_setFullYear,
-			},
-		}
-		setUTCFullYear_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 3,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "setUTCFullYear",
-				call: builtinDate_setUTCFullYear,
-			},
-		}
-		parse_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 1,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "parse",
-				call: builtinDate_parse,
-			},
-		}
-		UTC_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 7,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "UTC",
-				call: builtinDate_UTC,
-			},
-		}
-		now_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "now",
-				call: builtinDate_now,
-			},
-		}
-		runtime.global.DatePrototype = &_object{
-			runtime:     runtime,
-			class:       "Date",
-			objectClass: _classObject,
-			prototype:   runtime.global.ObjectPrototype,
-			extensible:  true,
-			value:       prototypeValueDate,
-			property: map[string]_property{
-				"toString": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toString_function,
-					},
-				},
-				"toDateString": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toDateString_function,
-					},
-				},
-				"toTimeString": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toTimeString_function,
-					},
-				},
-				"toUTCString": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toUTCString_function,
-					},
-				},
-				"toISOString": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toISOString_function,
-					},
-				},
-				"toJSON": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toJSON_function,
-					},
-				},
-				"toGMTString": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toGMTString_function,
-					},
-				},
-				"toLocaleString": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toLocaleString_function,
-					},
-				},
-				"toLocaleDateString": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toLocaleDateString_function,
-					},
-				},
-				"toLocaleTimeString": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: toLocaleTimeString_function,
-					},
-				},
-				"valueOf": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: valueOf_function,
-					},
-				},
-				"getTime": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getTime_function,
-					},
-				},
-				"getYear": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getYear_function,
-					},
-				},
-				"getFullYear": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getFullYear_function,
-					},
-				},
-				"getUTCFullYear": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getUTCFullYear_function,
-					},
-				},
-				"getMonth": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getMonth_function,
-					},
-				},
-				"getUTCMonth": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getUTCMonth_function,
-					},
-				},
-				"getDate": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getDate_function,
-					},
-				},
-				"getUTCDate": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getUTCDate_function,
-					},
-				},
-				"getDay": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getDay_function,
-					},
-				},
-				"getUTCDay": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getUTCDay_function,
-					},
-				},
-				"getHours": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getHours_function,
-					},
-				},
-				"getUTCHours": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getUTCHours_function,
-					},
-				},
-				"getMinutes": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getMinutes_function,
-					},
-				},
-				"getUTCMinutes": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getUTCMinutes_function,
-					},
-				},
-				"getSeconds": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getSeconds_function,
-					},
-				},
-				"getUTCSeconds": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getUTCSeconds_function,
-					},
-				},
-				"getMilliseconds": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getMilliseconds_function,
-					},
-				},
-				"getUTCMilliseconds": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getUTCMilliseconds_function,
-					},
-				},
-				"getTimezoneOffset": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: getTimezoneOffset_function,
-					},
-				},
-				"setTime": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setTime_function,
-					},
-				},
-				"setMilliseconds": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setMilliseconds_function,
-					},
-				},
-				"setUTCMilliseconds": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setUTCMilliseconds_function,
-					},
-				},
-				"setSeconds": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setSeconds_function,
-					},
-				},
-				"setUTCSeconds": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setUTCSeconds_function,
-					},
-				},
-				"setMinutes": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setMinutes_function,
-					},
-				},
-				"setUTCMinutes": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setUTCMinutes_function,
-					},
-				},
-				"setHours": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setHours_function,
-					},
-				},
-				"setUTCHours": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setUTCHours_function,
-					},
-				},
-				"setDate": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setDate_function,
-					},
-				},
-				"setUTCDate": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setUTCDate_function,
-					},
-				},
-				"setMonth": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setMonth_function,
-					},
-				},
-				"setUTCMonth": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setUTCMonth_function,
-					},
-				},
-				"setYear": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setYear_function,
-					},
-				},
-				"setFullYear": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setFullYear_function,
-					},
-				},
-				"setUTCFullYear": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: setUTCFullYear_function,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"toString",
-				"toDateString",
-				"toTimeString",
-				"toUTCString",
-				"toISOString",
-				"toJSON",
-				"toGMTString",
-				"toLocaleString",
-				"toLocaleDateString",
-				"toLocaleTimeString",
-				"valueOf",
-				"getTime",
-				"getYear",
-				"getFullYear",
-				"getUTCFullYear",
-				"getMonth",
-				"getUTCMonth",
-				"getDate",
-				"getUTCDate",
-				"getDay",
-				"getUTCDay",
-				"getHours",
-				"getUTCHours",
-				"getMinutes",
-				"getUTCMinutes",
-				"getSeconds",
-				"getUTCSeconds",
-				"getMilliseconds",
-				"getUTCMilliseconds",
-				"getTimezoneOffset",
-				"setTime",
-				"setMilliseconds",
-				"setUTCMilliseconds",
-				"setSeconds",
-				"setUTCSeconds",
-				"setMinutes",
-				"setUTCMinutes",
-				"setHours",
-				"setUTCHours",
-				"setDate",
-				"setUTCDate",
-				"setMonth",
-				"setUTCMonth",
-				"setYear",
-				"setFullYear",
-				"setUTCFullYear",
-			},
-		}
-		runtime.global.Date = &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			value: _nativeFunctionObject{
-				name:      "Date",
-				call:      builtinDate,
-				construct: builtinNewDate,
-			},
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 7,
-					},
-				},
-				"prototype": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueObject,
-						value: runtime.global.DatePrototype,
-					},
-				},
-				"parse": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: parse_function,
-					},
-				},
-				"UTC": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: UTC_function,
-					},
-				},
-				"now": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: now_function,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-				"prototype",
-				"parse",
-				"UTC",
-				"now",
-			},
-		}
-		runtime.global.DatePrototype.property["constructor"] =
-			_property{
-				mode: 0101,
-				value: Value{
-					kind:  valueObject,
-					value: runtime.global.Date,
-				},
-			}
-	}
+	//{
+	//	toString_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toString",
+	//			call: builtinDate_toString,
+	//		},
+	//	}
+	//	toDateString_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toDateString",
+	//			call: builtinDate_toDateString,
+	//		},
+	//	}
+	//	toTimeString_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toTimeString",
+	//			call: builtinDate_toTimeString,
+	//		},
+	//	}
+	//	toUTCString_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toUTCString",
+	//			call: builtinDate_toUTCString,
+	//		},
+	//	}
+	//	toISOString_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toISOString",
+	//			call: builtinDate_toISOString,
+	//		},
+	//	}
+	//	toJSON_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 1,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toJSON",
+	//			call: builtinDate_toJSON,
+	//		},
+	//	}
+	//	toGMTString_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toGMTString",
+	//			call: builtinDate_toGMTString,
+	//		},
+	//	}
+	//	toLocaleString_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toLocaleString",
+	//			call: builtinDate_toLocaleString,
+	//		},
+	//	}
+	//	toLocaleDateString_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toLocaleDateString",
+	//			call: builtinDate_toLocaleDateString,
+	//		},
+	//	}
+	//	toLocaleTimeString_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "toLocaleTimeString",
+	//			call: builtinDate_toLocaleTimeString,
+	//		},
+	//	}
+	//	valueOf_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "valueOf",
+	//			call: builtinDate_valueOf,
+	//		},
+	//	}
+	//	getTime_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getTime",
+	//			call: builtinDate_getTime,
+	//		},
+	//	}
+	//	getYear_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getYear",
+	//			call: builtinDate_getYear,
+	//		},
+	//	}
+	//	getFullYear_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getFullYear",
+	//			call: builtinDate_getFullYear,
+	//		},
+	//	}
+	//	getUTCFullYear_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getUTCFullYear",
+	//			call: builtinDate_getUTCFullYear,
+	//		},
+	//	}
+	//	getMonth_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getMonth",
+	//			call: builtinDate_getMonth,
+	//		},
+	//	}
+	//	getUTCMonth_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getUTCMonth",
+	//			call: builtinDate_getUTCMonth,
+	//		},
+	//	}
+	//	getDate_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getDate",
+	//			call: builtinDate_getDate,
+	//		},
+	//	}
+	//	getUTCDate_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getUTCDate",
+	//			call: builtinDate_getUTCDate,
+	//		},
+	//	}
+	//	getDay_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getDay",
+	//			call: builtinDate_getDay,
+	//		},
+	//	}
+	//	getUTCDay_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getUTCDay",
+	//			call: builtinDate_getUTCDay,
+	//		},
+	//	}
+	//	getHours_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getHours",
+	//			call: builtinDate_getHours,
+	//		},
+	//	}
+	//	getUTCHours_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getUTCHours",
+	//			call: builtinDate_getUTCHours,
+	//		},
+	//	}
+	//	getMinutes_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getMinutes",
+	//			call: builtinDate_getMinutes,
+	//		},
+	//	}
+	//	getUTCMinutes_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getUTCMinutes",
+	//			call: builtinDate_getUTCMinutes,
+	//		},
+	//	}
+	//	getSeconds_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getSeconds",
+	//			call: builtinDate_getSeconds,
+	//		},
+	//	}
+	//	getUTCSeconds_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getUTCSeconds",
+	//			call: builtinDate_getUTCSeconds,
+	//		},
+	//	}
+	//	getMilliseconds_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getMilliseconds",
+	//			call: builtinDate_getMilliseconds,
+	//		},
+	//	}
+	//	getUTCMilliseconds_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getUTCMilliseconds",
+	//			call: builtinDate_getUTCMilliseconds,
+	//		},
+	//	}
+	//	getTimezoneOffset_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "getTimezoneOffset",
+	//			call: builtinDate_getTimezoneOffset,
+	//		},
+	//	}
+	//	setTime_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 1,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setTime",
+	//			call: builtinDate_setTime,
+	//		},
+	//	}
+	//	setMilliseconds_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 1,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setMilliseconds",
+	//			call: builtinDate_setMilliseconds,
+	//		},
+	//	}
+	//	setUTCMilliseconds_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 1,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setUTCMilliseconds",
+	//			call: builtinDate_setUTCMilliseconds,
+	//		},
+	//	}
+	//	setSeconds_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 2,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setSeconds",
+	//			call: builtinDate_setSeconds,
+	//		},
+	//	}
+	//	setUTCSeconds_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 2,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setUTCSeconds",
+	//			call: builtinDate_setUTCSeconds,
+	//		},
+	//	}
+	//	setMinutes_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 3,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setMinutes",
+	//			call: builtinDate_setMinutes,
+	//		},
+	//	}
+	//	setUTCMinutes_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 3,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setUTCMinutes",
+	//			call: builtinDate_setUTCMinutes,
+	//		},
+	//	}
+	//	setHours_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 4,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setHours",
+	//			call: builtinDate_setHours,
+	//		},
+	//	}
+	//	setUTCHours_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 4,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setUTCHours",
+	//			call: builtinDate_setUTCHours,
+	//		},
+	//	}
+	//	setDate_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 1,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setDate",
+	//			call: builtinDate_setDate,
+	//		},
+	//	}
+	//	setUTCDate_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 1,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setUTCDate",
+	//			call: builtinDate_setUTCDate,
+	//		},
+	//	}
+	//	setMonth_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 2,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setMonth",
+	//			call: builtinDate_setMonth,
+	//		},
+	//	}
+	//	setUTCMonth_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 2,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setUTCMonth",
+	//			call: builtinDate_setUTCMonth,
+	//		},
+	//	}
+	//	setYear_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 1,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setYear",
+	//			call: builtinDate_setYear,
+	//		},
+	//	}
+	//	setFullYear_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 3,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setFullYear",
+	//			call: builtinDate_setFullYear,
+	//		},
+	//	}
+	//	setUTCFullYear_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 3,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "setUTCFullYear",
+	//			call: builtinDate_setUTCFullYear,
+	//		},
+	//	}
+	//	parse_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 1,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "parse",
+	//			call: builtinDate_parse,
+	//		},
+	//	}
+	//	UTC_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 7,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "UTC",
+	//			call: builtinDate_UTC,
+	//		},
+	//	}
+	//	now_function := &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 0,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//		},
+	//		value: _nativeFunctionObject{
+	//			name: "now",
+	//			call: builtinDate_now,
+	//		},
+	//	}
+	//	runtime.global.DatePrototype = &_object{
+	//		runtime:     runtime,
+	//		class:       "Date",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.ObjectPrototype,
+	//		extensible:  true,
+	//		value:       prototypeValueDate,
+	//		property: map[string]_property{
+	//			"toString": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toString_function,
+	//				},
+	//			},
+	//			"toDateString": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toDateString_function,
+	//				},
+	//			},
+	//			"toTimeString": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toTimeString_function,
+	//				},
+	//			},
+	//			"toUTCString": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toUTCString_function,
+	//				},
+	//			},
+	//			"toISOString": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toISOString_function,
+	//				},
+	//			},
+	//			"toJSON": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toJSON_function,
+	//				},
+	//			},
+	//			"toGMTString": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toGMTString_function,
+	//				},
+	//			},
+	//			"toLocaleString": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toLocaleString_function,
+	//				},
+	//			},
+	//			"toLocaleDateString": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toLocaleDateString_function,
+	//				},
+	//			},
+	//			"toLocaleTimeString": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: toLocaleTimeString_function,
+	//				},
+	//			},
+	//			"valueOf": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: valueOf_function,
+	//				},
+	//			},
+	//			"getTime": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getTime_function,
+	//				},
+	//			},
+	//			"getYear": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getYear_function,
+	//				},
+	//			},
+	//			"getFullYear": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getFullYear_function,
+	//				},
+	//			},
+	//			"getUTCFullYear": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getUTCFullYear_function,
+	//				},
+	//			},
+	//			"getMonth": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getMonth_function,
+	//				},
+	//			},
+	//			"getUTCMonth": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getUTCMonth_function,
+	//				},
+	//			},
+	//			"getDate": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getDate_function,
+	//				},
+	//			},
+	//			"getUTCDate": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getUTCDate_function,
+	//				},
+	//			},
+	//			"getDay": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getDay_function,
+	//				},
+	//			},
+	//			"getUTCDay": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getUTCDay_function,
+	//				},
+	//			},
+	//			"getHours": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getHours_function,
+	//				},
+	//			},
+	//			"getUTCHours": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getUTCHours_function,
+	//				},
+	//			},
+	//			"getMinutes": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getMinutes_function,
+	//				},
+	//			},
+	//			"getUTCMinutes": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getUTCMinutes_function,
+	//				},
+	//			},
+	//			"getSeconds": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getSeconds_function,
+	//				},
+	//			},
+	//			"getUTCSeconds": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getUTCSeconds_function,
+	//				},
+	//			},
+	//			"getMilliseconds": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getMilliseconds_function,
+	//				},
+	//			},
+	//			"getUTCMilliseconds": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getUTCMilliseconds_function,
+	//				},
+	//			},
+	//			"getTimezoneOffset": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: getTimezoneOffset_function,
+	//				},
+	//			},
+	//			"setTime": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setTime_function,
+	//				},
+	//			},
+	//			"setMilliseconds": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setMilliseconds_function,
+	//				},
+	//			},
+	//			"setUTCMilliseconds": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setUTCMilliseconds_function,
+	//				},
+	//			},
+	//			"setSeconds": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setSeconds_function,
+	//				},
+	//			},
+	//			"setUTCSeconds": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setUTCSeconds_function,
+	//				},
+	//			},
+	//			"setMinutes": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setMinutes_function,
+	//				},
+	//			},
+	//			"setUTCMinutes": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setUTCMinutes_function,
+	//				},
+	//			},
+	//			"setHours": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setHours_function,
+	//				},
+	//			},
+	//			"setUTCHours": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setUTCHours_function,
+	//				},
+	//			},
+	//			"setDate": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setDate_function,
+	//				},
+	//			},
+	//			"setUTCDate": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setUTCDate_function,
+	//				},
+	//			},
+	//			"setMonth": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setMonth_function,
+	//				},
+	//			},
+	//			"setUTCMonth": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setUTCMonth_function,
+	//				},
+	//			},
+	//			"setYear": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setYear_function,
+	//				},
+	//			},
+	//			"setFullYear": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setFullYear_function,
+	//				},
+	//			},
+	//			"setUTCFullYear": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: setUTCFullYear_function,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"toString",
+	//			"toDateString",
+	//			"toTimeString",
+	//			"toUTCString",
+	//			"toISOString",
+	//			"toJSON",
+	//			"toGMTString",
+	//			"toLocaleString",
+	//			"toLocaleDateString",
+	//			"toLocaleTimeString",
+	//			"valueOf",
+	//			"getTime",
+	//			"getYear",
+	//			"getFullYear",
+	//			"getUTCFullYear",
+	//			"getMonth",
+	//			"getUTCMonth",
+	//			"getDate",
+	//			"getUTCDate",
+	//			"getDay",
+	//			"getUTCDay",
+	//			"getHours",
+	//			"getUTCHours",
+	//			"getMinutes",
+	//			"getUTCMinutes",
+	//			"getSeconds",
+	//			"getUTCSeconds",
+	//			"getMilliseconds",
+	//			"getUTCMilliseconds",
+	//			"getTimezoneOffset",
+	//			"setTime",
+	//			"setMilliseconds",
+	//			"setUTCMilliseconds",
+	//			"setSeconds",
+	//			"setUTCSeconds",
+	//			"setMinutes",
+	//			"setUTCMinutes",
+	//			"setHours",
+	//			"setUTCHours",
+	//			"setDate",
+	//			"setUTCDate",
+	//			"setMonth",
+	//			"setUTCMonth",
+	//			"setYear",
+	//			"setFullYear",
+	//			"setUTCFullYear",
+	//		},
+	//	}
+	//	runtime.global.Date = &_object{
+	//		runtime:     runtime,
+	//		class:       "Function",
+	//		objectClass: _classObject,
+	//		prototype:   runtime.global.FunctionPrototype,
+	//		extensible:  true,
+	//		value: _nativeFunctionObject{
+	//			name:      "Date",
+	//			call:      builtinDate,
+	//			construct: builtinNewDate,
+	//		},
+	//		property: map[string]_property{
+	//			"length": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueNumber,
+	//					value: 7,
+	//				},
+	//			},
+	//			"prototype": _property{
+	//				mode: 0,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: runtime.global.DatePrototype,
+	//				},
+	//			},
+	//			"parse": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: parse_function,
+	//				},
+	//			},
+	//			"UTC": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: UTC_function,
+	//				},
+	//			},
+	//			"now": _property{
+	//				mode: 0101,
+	//				value: Value{
+	//					kind:  valueObject,
+	//					value: now_function,
+	//				},
+	//			},
+	//		},
+	//		propertyOrder: []string{
+	//			"length",
+	//			"prototype",
+	//			"parse",
+	//			"UTC",
+	//			"now",
+	//		},
+	//	}
+	//	runtime.global.DatePrototype.property["constructor"] =
+	//		_property{
+	//			mode: 0101,
+	//			value: Value{
+	//				kind:  valueObject,
+	//				value: runtime.global.Date,
+	//			},
+	//		}
+	//}
 	{
 		toString_function := &_object{
 			runtime:     runtime,

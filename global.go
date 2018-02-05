@@ -2,7 +2,6 @@ package otto
 
 import (
 	"strconv"
-	"time"
 )
 
 var (
@@ -22,15 +21,15 @@ var (
 		kind:  valueNumber,
 		value: 0,
 	}
-	prototypeValueDate = _dateObject{
-		epoch: 0,
-		isNaN: false,
-		time:  time.Unix(0, 0).UTC(),
-		value: Value{
-			kind:  valueNumber,
-			value: 0,
-		},
-	}
+	//prototypeValueDate = _dateObject{
+	//	epoch: 0,
+	//	isNaN: false,
+	//	time:  time.Unix(0, 0).UTC(),
+	//	value: Value{
+	//		kind:  valueNumber,
+	//		value: 0,
+	//	},
+	//}
 	prototypeValueRegExp = _regExpObject{
 		regularExpression: nil,
 		global:            false,
@@ -161,9 +160,14 @@ func (runtime *_runtime) _newRegExp(pattern string, flags string) *_object {
 
 // TODO Should (probably) be one argument, right? This is redundant
 func (runtime *_runtime) newDate(epoch float64) *_object {
-	self := runtime.newDateObject(epoch)
-	self.prototype = runtime.global.DatePrototype
-	return self
+	//self := runtime.newDateObject(epoch)
+	//self.prototype = runtime.global.DatePrototype
+	//return self
+	message, err := ToValue("Date-realted Calling is forbidden.")
+	if err != nil {
+		panic(err.Error())
+	}
+	return runtime.newTypeError(message)
 }
 
 func (runtime *_runtime) newError(name string, message Value, stackFramesToPop int) *_object {

@@ -60,7 +60,7 @@ func (in *_runtime) clone() *_runtime {
 		clone.object(in.global.StringPrototype),
 		clone.object(in.global.BooleanPrototype),
 		clone.object(in.global.NumberPrototype),
-		clone.object(in.global.DatePrototype),
+		//clone.object(in.global.DatePrototype),
 		clone.object(in.global.RegExpPrototype),
 		clone.object(in.global.ErrorPrototype),
 		clone.object(in.global.EvalErrorPrototype),

@@ -39,7 +39,7 @@ type _global struct {
 	StringPrototype         *_object // String.prototype
 	BooleanPrototype        *_object // Boolean.prototype
 	NumberPrototype         *_object // Number.prototype
-	DatePrototype           *_object // Date.prototype
+	//DatePrototype           *_object // Date.prototype
 	RegExpPrototype         *_object // RegExp.prototype
 	ErrorPrototype          *_object // Error.prototype
 	EvalErrorPrototype      *_object
