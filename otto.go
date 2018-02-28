@@ -366,9 +366,9 @@ func (self Otto) SetDebuggerHandler(fn func(vm *Otto)) {
 	self.runtime.debugger = fn
 }
 
-func (self Otto) SetRandomSource(fn func() float64) {
-	self.runtime.random = fn
-}
+//func (self Otto) SetRandomSource(fn func() float64) {
+//	self.runtime.random = fn
+//}
 
 // SetStackDepthLimit sets an upper limit to the depth of the JavaScript
 // stack. In simpler terms, this limits the number of "nested" function calls

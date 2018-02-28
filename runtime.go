@@ -58,7 +58,7 @@ type _runtime struct {
 	otto         *Otto
 	eval         *_object // The builtin eval, for determine indirect versus direct invocation
 	debugger     func(*Otto)
-	random       func() float64
+	//random       func() float64
 	stackLimit   int
 	traceLimit   int
 

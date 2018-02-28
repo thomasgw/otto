@@ -19,7 +19,7 @@ func (in *_runtime) clone() *_runtime {
 
 	out := &_runtime{
 		debugger:   in.debugger,
-		random:     in.random,
+		//random:     in.random,
 		stackLimit: in.stackLimit,
 		traceLimit: in.traceLimit,
 	}

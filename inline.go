@@ -3068,29 +3068,29 @@ func _newContext(runtime *_runtime) {
 				call: builtinMath_pow,
 			},
 		}
-		random_function := &_object{
-			runtime:     runtime,
-			class:       "Function",
-			objectClass: _classObject,
-			prototype:   runtime.global.FunctionPrototype,
-			extensible:  true,
-			property: map[string]_property{
-				"length": _property{
-					mode: 0,
-					value: Value{
-						kind:  valueNumber,
-						value: 0,
-					},
-				},
-			},
-			propertyOrder: []string{
-				"length",
-			},
-			value: _nativeFunctionObject{
-				name: "random",
-				call: builtinMath_random,
-			},
-		}
+		//random_function := &_object{
+		//	runtime:     runtime,
+		//	class:       "Function",
+		//	objectClass: _classObject,
+		//	prototype:   runtime.global.FunctionPrototype,
+		//	extensible:  true,
+		//	property: map[string]_property{
+		//		"length": _property{
+		//			mode: 0,
+		//			value: Value{
+		//				kind:  valueNumber,
+		//				value: 0,
+		//			},
+		//		},
+		//	},
+		//	propertyOrder: []string{
+		//		"length",
+		//	},
+		//	value: _nativeFunctionObject{
+		//		name: "random",
+		//		call: builtinMath_random,
+		//	},
+		//}
 		round_function := &_object{
 			runtime:     runtime,
 			class:       "Function",
@@ -3281,13 +3281,13 @@ func _newContext(runtime *_runtime) {
 						value: pow_function,
 					},
 				},
-				"random": _property{
-					mode: 0101,
-					value: Value{
-						kind:  valueObject,
-						value: random_function,
-					},
-				},
+				//"random": _property{
+				//	mode: 0101,
+				//	value: Value{
+				//		kind:  valueObject,
+				//		value: random_function,
+				//	},
+				//},
 				"round": _property{
 					mode: 0101,
 					value: Value{
@@ -3387,7 +3387,7 @@ func _newContext(runtime *_runtime) {
 				"max",
 				"min",
 				"pow",
-				"random",
+				//"random",
 				"round",
 				"sin",
 				"sqrt",

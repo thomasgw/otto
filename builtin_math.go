@@ -2,7 +2,6 @@ package otto
 
 import (
 	"math"
-	"math/rand"
 )
 
 // Math
@@ -116,15 +115,15 @@ func builtinMath_pow(call FunctionCall) Value {
 	return toValue_float64(math.Pow(x, y))
 }
 
-func builtinMath_random(call FunctionCall) Value {
-	var v float64
-	if call.runtime.random != nil {
-		v = call.runtime.random()
-	} else {
-		v = rand.Float64()
-	}
-	return toValue_float64(v)
-}
+//func builtinMath_random(call FunctionCall) Value {
+//	var v float64
+//	if call.runtime.random != nil {
+//		v = call.runtime.random()
+//	} else {
+//		v = rand.Float64()
+//	}
+//	return toValue_float64(v)
+//}
 
 func builtinMath_round(call FunctionCall) Value {
 	number := call.Argument(0).float64()

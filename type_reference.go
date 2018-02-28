@@ -1,7 +1,5 @@
 package otto
 
-import "fmt"
-
 type _reference interface {
 	invalid() bool         // IsUnresolvableReference
 	getValue() Value       // getValue
@@ -95,10 +93,9 @@ func (self *_stashReference) delete() bool {
 // getIdentifierReference
 
 func getIdentifierReference(runtime *_runtime, stash _stash, name string, strict bool, at _at) _reference {
-	fmt.Println("^^^^^^^^",name,"^^^^^^^^^^")
 	if stash == nil {
-		panic(newException("reference is not found in the current scope."))
-		//return newPropertyReference(runtime, nil, name, strict, at)
+		//panic(newException("reference '"+name+"' is not found in the current scope."))
+		return newPropertyReference(runtime, nil, name, strict, at)
 	}
 	if stash.hasBinding(name) {
 		return stash.newReference(name, strict, at)
