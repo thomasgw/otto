@@ -44,6 +44,7 @@ func newContext() *_runtime {
 
 	self := &_runtime{}
 
+	self.cache = NewJITCahce()
 	self.globalStash = self.newObjectStash(nil, nil)
 	self.globalObject = self.globalStash.object
 

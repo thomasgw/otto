@@ -66,7 +66,23 @@ func (self *_runtime) cmpl_evaluate_nodeExpression(node _nodeExpression) Value {
 		// TODO Should be true or false (strictness) depending on context
 		// getIdentifierReference should not return nil, but we check anyway and panic
 		// so as not to propagate the nil into something else
-		reference := getIdentifierReference(self, self.scope.lexical, name, false, _at(node.idx))
+		var reference _reference
+		if value := self.cache.Get(node); value == nil{
+			if pvalue := self.cache.PropGet(node); pvalue != nil{
+				reference = newPropertyReference(self, pvalue, node.name, false, _at(node.idx))
+			}else{
+				reference = getIdentifierReference(self, self.scope.lexical, name, false, _at(node.idx))
+				if sreference,ok := reference.(*_stashReference); ok {
+					self.cache.Put(node, sreference.base)
+				}else{
+					if preference,ok := reference.(*_propertyReference); ok{
+						self.cache.PropPut(node, preference.base)
+					}
+				}
+			}
+		}else {
+			reference = value.newReference(name, false, _at(node.idx))
+		}
 		if reference == nil {
 			// Should never get here!
 			panic(hereBeDragons("referenceError == nil: " + name))
@@ -449,11 +465,30 @@ func (self *_runtime) cmpl_evaluate_nodeUnaryExpression(node *_nodeUnaryExpressi
 
 func (self *_runtime) cmpl_evaluate_nodeVariableExpression(node *_nodeVariableExpression) Value {
 	if node.initializer != nil {
-		// FIXME If reference is nil
-		left := getIdentifierReference(self, self.scope.lexical, node.name, false, _at(node.idx))
+		var (
+			left _reference
+		)
+		if value := self.cache.Get(node); value == nil{
+			if pvalue := self.cache.PropGet(node); pvalue != nil{
+				left = newPropertyReference(self, pvalue, node.name, false, _at(node.idx))
+			}else{
+				left = getIdentifierReference(self, self.scope.lexical, node.name, false, _at(node.idx))
+				if sleft,ok := left.(*_stashReference); ok{
+					self.cache.Put(node, sleft.base)
+				}else{
+					if pleft,ok := left.(*_propertyReference); ok{
+						self.cache.PropPut(node, pleft.base)
+					}
+				}
+			}
+
+		}else {
+			// FIXME If reference is nil
+			left = value.newReference(node.name, false, _at(node.idx))
+		}
+
 		right := self.cmpl_evaluate_nodeExpression(node.initializer)
 		rightValue := right.resolve()
-
 		self.putValue(left, rightValue)
 	}
 	return toValue_string(node.name)

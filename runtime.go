@@ -64,6 +64,7 @@ type _runtime struct {
 
 	labels []string // FIXME
 	lck    sync.Mutex
+	cache  *JITCache
 }
 
 func (self *_runtime) enterScope(scope *_scope) {
